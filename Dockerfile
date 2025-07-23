@@ -1,12 +1,10 @@
-# backend/Dockerfile
-FROM rust:1.77 AS builder
+FROM rustlang/rust:nightly AS builder
 
 WORKDIR /app
 COPY . .
 
 RUN cargo build --release
 
-# --- producción ---
 FROM debian:bullseye-slim
 
 WORKDIR /app

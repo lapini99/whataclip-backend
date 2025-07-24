@@ -11,4 +11,4 @@ WORKDIR /app
 COPY --from=builder /app/target/release/backend ./backend
 
 EXPOSE 8000
-CMD ["./backend"]
+CMD ["cargo", "watch", "-x", "run"]

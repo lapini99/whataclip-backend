@@ -1,0 +1,21 @@
+{
+    "mail": "alapinilopez@gmail.com",
+    "username": "lapini",
+    "password": "a",
+    "role": "admin",
+    "currentFamilies": 
+        [
+            {
+                "name": "testFamily",
+                "canUpload": true,
+                "canEdit": true,
+                "canDelete": true
+            },
+            {
+                "name": "testFamily2",
+                "canUpload": true,
+                "canEdit": true,
+                "canDelete": true
+            }
+        ]
+}

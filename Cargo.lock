@@ -326,6 +326,7 @@ dependencies = [
  "mongodb",
  "rocket",
  "serde",
+ "serde_json",
 ]
 
 [[package]]

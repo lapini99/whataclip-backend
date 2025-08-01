@@ -1,6 +1,6 @@
 use crate::{models::user_model::User, repository::mongodb_repo::MongoRepo};
 use mongodb::results::InsertOneResult;
-use rocket::{http::Status, serde::json::Json, State};
+use rocket::{http::Status, serde::json::Json, State, get, post};
 
 #[post("/user", format = "json", data = "<new_user>")]
 pub fn create_user(new_user: Json<User>, db: &State<MongoRepo>) -> Result<Json<InsertOneResult>, Status> {

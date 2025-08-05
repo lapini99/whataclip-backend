@@ -8,6 +8,9 @@ pub struct User {
     pub mail: String,
     pub username: String,
     pub password: String,
+    pub role: String,
+    pub avatar: String,
+    pub biography: String,
     #[serde(default)]
     pub current_families: Vec<serde_json::Value>,
 }

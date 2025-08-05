@@ -34,6 +34,9 @@ impl MongoRepo {
             mail: new_user.mail,
             username: new_user.username,
             password: new_user.password,
+            role: new_user.role,
+            avatar: new_user.avatar,
+            biography: new_user.biography,
             current_families: new_user.current_families,
         };
     

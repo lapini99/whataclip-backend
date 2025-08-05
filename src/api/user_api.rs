@@ -8,7 +8,10 @@ pub fn create_user(new_user: Json<User>, db: &State<MongoRepo>) -> Result<Json<I
         id: mongodb::bson::oid::ObjectId::new(),
         mail: new_user.mail.to_owned(),
         username: new_user.username.to_owned(),
+        role: new_user.role.to_owned(),
         password: new_user.password.to_owned(),
+        avatar: new_user.avatar.to_owned(),
+        biography: new_user.biography.to_owned(),
         current_families: new_user.current_families.to_owned(),
     };
 

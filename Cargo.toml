@@ -9,6 +9,7 @@ rocket_cors = "0.6.0"
 serde = "1.0.136"
 dotenv = "0.15.0"
 serde_json = "1.0.141"
+chrono = { version = "0.4.41", features = ["serde"] }
 
 [dependencies.mongodb]
 version = "2.2.0"

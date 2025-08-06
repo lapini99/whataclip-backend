@@ -1,0 +1,12 @@
+{
+    "title": "testVideo",
+    "description": "This is a test video",
+    "uploader": "lapini",
+    "uploadDate": "10-01-1984",
+    "tags": [
+        "test",
+        "video"
+    ],
+    "thumbnail": "http://example.com/testthumbnail.jpg",
+    "url": "http://example.com/testvideo"
+}

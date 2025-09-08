@@ -49,4 +49,10 @@ impl MongoRepo {
         let user = self.col.find_one(filter, None).ok().expect("Failed to find user");
         Ok(user.unwrap())
     }
+
+    pub fn get_user_by_email(&self, email: &String) -> Result<User, Error> {
+        let filter = doc! { "mail": email };
+        let user = self.col.find_one(filter, None).ok().expect("Failed to find user");
+        Ok(user.unwrap())
+    }
 }

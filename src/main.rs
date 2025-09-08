@@ -7,10 +7,9 @@ extern crate rocket;
 use rocket::{get, http::Status, serde::json::Json, launch, routes};
 use rocket_cors::{AllowedOrigins, CorsOptions};
 
-use api::user_api::create_user;
+use api::user_api::{create_user, get_user, login_user};
+use api::jwt_api::login;
 use repository::mongodb_repo::MongoRepo;
-
-use crate::api::user_api::get_user;
 
 #[get("/")]
 fn hello() -> Result<Json<String>, Status> {
@@ -36,6 +35,6 @@ fn rocket() -> _ {
 
     rocket::build()
         .manage(db)
-        .mount("/", routes![hello, create_user, get_user])
+        .mount("/", routes![hello, create_user, get_user, login_user, login])
         .attach(cors)
 }

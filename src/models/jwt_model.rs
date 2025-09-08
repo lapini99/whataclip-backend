@@ -2,7 +2,7 @@ use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct LoginRequest {
-    pub mail: String,
+    pub mail: String,  // Keep this as 'mail' to match your User model
     pub password: String,
 }
 
